@@ -21,7 +21,7 @@ namespace ConsoleTestCalculator
 
 
                 Console.WriteLine("MENU");
-                Console.WriteLine("----------------------");
+                Console.WriteLine("-----------------------");
                 Console.WriteLine("Add tryck 1");
                 Console.WriteLine("Sub tryck 2");
                 Console.WriteLine("Mult tryck 3");
