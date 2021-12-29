@@ -72,7 +72,7 @@ namespace ConsoleTestCalculator
                         else
                         {
                             Sub(ArryListIn);
-                        }                                                                                     //Sub(tal1, tal2);
+                        }                                                                                    
                         break;
 
                     case 3:
@@ -86,7 +86,7 @@ namespace ConsoleTestCalculator
                             Console.WriteLine("Du försöker dela med 0 som är ogiltligt. Slå in ett värde som inte är 0");
                             tal2 = GetNumberFromUser();
                         }
-                        Sub(tal1, tal2);
+                        Div(tal1, tal2);
                         break;
 
                     case 5:
@@ -124,7 +124,7 @@ namespace ConsoleTestCalculator
         {
 
             Resultat = arrayListIn[0];
-            for (int i = 1; i < arrayListIn.Length; i++)                                                   //foreach (int tal in arrayListIn)
+            for (int i = 1; i < arrayListIn.Length; i++)                                                   
             {
                 Resultat = Resultat - arrayListIn[i];
 
@@ -137,14 +137,14 @@ namespace ConsoleTestCalculator
         public static double[] TalArray()
         {
             int y = 0;
-            Console.WriteLine("Välj hur många tal du vill slå in");                         // vet att jag inte behöver göra detta men han inte göra om.... JUL!
+            Console.WriteLine("Välj hur många tal du vill slå in");                         
             int antal = int.Parse(Console.ReadLine());
             List<double> list = new List<double>();
 
             for (int i = 0; i < antal; i++)
             {
                 Console.WriteLine("Please enter a number");
-                //list.Add(double.Parse(Console.ReadLine()));
+               
                 list.Add(GetNumberFromUser());
                 y = y + i;
             }
@@ -196,49 +196,8 @@ namespace ConsoleTestCalculator
 
         public static double Div(double tal1, double tal2)
         {
-
-
-
-            /*try
-            {
-                Resultat = tal1 / tal2;
-                //Console.WriteLine(tal1 / tal2);
-            }
-            catch (DivideByZeroException)
-            {
-                Console.WriteLine("Division of {0} by zero.", tal1);
-            }
-            return Resultat;
-            /*try
-            {
-                Resultat = tal1 / tal2;
-            }
-            catch (DivideByZeroException )//e innanför ()
-            {
-                Console.WriteLine("Exception caught: {0}");//, e);
-            }
-            finally
-            {
-                Console.WriteLine("Result: {0}", Resultat);
-            }
-            /* while (tal2 == 0)
-             {
-             if(tal2 == 0)
-             {
-                 throw new DivideByZeroException("dlllllllllllllelelele");
-             }
-
-
-
-             Console.WriteLine("Du försöker att dela med 0, det är inte tillåtet, försök med ett nytt tal!");
-             tal2 = double.Parse(Console.ReadLine());
-             //break; Fick ta bort denna såklart. annars funkade den bara en gång.
-             }*/
-
             Resultat = tal1 / tal2;
             return Resultat;
-
-
 
         }
     }
